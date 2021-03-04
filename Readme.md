@@ -26,15 +26,13 @@ The first day of working, just planning and looking source around. Just try to s
 **Date:** 05 March
 i've started to lay down a plan for the app, initialized folder, installed some packages and made a basic routing. 
 
-I've studied how to *design schemas* in MongoDB and i leave you two usefull resource:
-[📝 - 6 Thumb Rules for Schema Design](https://www.mongodb.com/blog/post/6-rules-of-thumb-for-mongodb-schema-design-part-1)
-[📺 - Mongo DB Best Practice](https://www.youtube.com/watch?v=leNCfU5SYR8&t=2715s)
-
-![Note About Schema Design](READMEimg/Agenda_2020-52.jpg)
+I've studied how to *design schemas* in MongoDB and i leave you two usefull resource:  
+[📝 - 6 Thumb Rules for Schema Design](https://www.mongodb.com/blog/post/6-rules-of-thumb-for-mongodb-schema-design-part-1)  
+[📺 - Mongo DB Best Practice](https://www.youtube.com/watch?v=leNCfU5SYR8&t=2715s)  
+![Note About Schema Design](READMEimg/Agenda_2020-52.jpg)  
 
 
 Then i sketched out the first sample of schemas that you can find in sample.js and i've searched how to find the nearest location in using the coords of cites and photos, stackoverflow gave me an [hint!](https://stackoverflow.com/questions/36534879/how-to-find-data-of-nearest-location-from-mongodb-collection-using-mongoose)
 
 *Hours Spent:* 3
 
-# App-Journey-1
