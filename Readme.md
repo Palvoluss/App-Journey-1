@@ -31,8 +31,8 @@ I've studied how to *design schemas* in MongoDB and i leave you two usefull reso
 [📺 - Mongo DB Best Practice](https://www.youtube.com/watch?v=leNCfU5SYR8&t=2715s)  
 
 
-<img src="READMEimg/53.jpg" alt="Note About Schema Design" height="450" />  
-<img src="READMEimg/54.jpg" alt="Note About Making Schema" height="450" />  
+<img src="READMEimg/52.jpg" alt="Note About Schema Design" height="450" />  
+<img src="READMEimg/53.jpg" alt="Note About Making Schema" height="450" />  
 
 
 Then i sketched out the first sample of schemas that you can find in sample.js and i've searched how to find the nearest location in using the coords of cites and photos, stackoverflow gave me an [hint!](https://stackoverflow.com/questions/36534879/how-to-find-data-of-nearest-location-from-mongodb-collection-using-mongoose)
