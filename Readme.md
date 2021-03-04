@@ -17,7 +17,7 @@ The project is pretty simple, i have to build a Node.js app whic helps to report
 **Date:** 04 March
 The first day of working, just planning and looking source around. Just try to sketch the app and his function
 
-![First Day Notes](READMEimg/51.jpg){ width=50% }
+<img src="READMEimg/51.jpg" height="150" />
 
 *Hours Spent:* 2
 
