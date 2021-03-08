@@ -24,7 +24,7 @@ The project is pretty simple, i have to build a Node.js app which helps to repor
 
 ### Day 0
 
-**Date:** 03 March
+**Date:** 03 March  
 The first day of working, just planning and looking source around. Just try to sketch the app and his function
 
 <img src="READMEimg/51.jpg" alt="First day notes" height="450" />
@@ -33,7 +33,7 @@ The first day of working, just planning and looking source around. Just try to s
 
 ### Day 1
 
-**Date:** 04 March
+**Date:** 04 March  
 i've started to lay down a plan for the app, initialized folder, installed some packages and made a basic routing. 
 
 I've studied how to *design schemas* in MongoDB and i leave you two usefull resource:  
@@ -76,6 +76,22 @@ This series of tuts was what i needed, a *fil rouge* between everything. As you 
 See ya tomorrow!
 
 *Hours Spent:* 4
+
+### Day 3
+
+**Date:** 08 March  
+Finished @rwieruch tuts. So now i have a clear plan on how to go on by myself. Was very useful reading the [Expess advanced routing](https://expressjs.com/en/guide/routing.html) article on Express.js docs. Here some notes: 
+
+<img src="READMEimg/54.jpg" alt="Advanced Routing Notes" height="450" />  
+
+Not much to say anymore, for tomorrow i plan to:  
+* Set the complete file tree
+* Continuing reading Multer for implementing photo uploading
+* Code APIs and Schema i need for this project
+
+**What I've learned today:** I finally get a full overview on how a RESTful API App works, Advanced and Module routing with express, handling error in api request, some new query with Mongoose.
+
+*Hours Spent:* 3
 
 ---
 

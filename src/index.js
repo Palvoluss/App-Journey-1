@@ -1,8 +1,9 @@
 import 'dotenv/config'
 import cors from 'cors'
 import express from 'express'
-import { v4 as uuidv4 } from 'uuid'
-const models = require('./models')
+import routes from './routes'
+
+import models, { connectDb } from './models'
 
 const app = express()
 const PORT = process.env.SECRET_PORT || 3010
@@ -12,77 +13,71 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(cors())
 
-app.use((req, res, next) => {
+app.use(async (req, res, next) => {
   req.context = {
     models,
-    me: models.users[1]
+    me: await models.User.findByLogin('palvolus')
   }
   next()
 })
 
-app.get('/', (req, res) => {
-  return res.send('Recived a GET HTTP method')
+app.use('/session', routes.session)
+app.use('/users', routes.user)
+app.use('/messages', routes.message)
+
+app.use((error, req, res, next) => {
+  return res.status(500).json({ error: error.toString() })
 })
 
-app.post('/', (req, res) => {
-  return res.send('Recived a POST HTTP method')
-})
+const eraseDataonSync = true
 
-app.put('/', (req, res) => {
-  return res.send('Recived a  PUT HTTP method')
-})
-
-app.delete('/', (req, res) => {
-  return res.send('Recived a  DELETE HTTP method')
-})
-
-app.get('/session', (req, res) => {
-  return res.send(req.context.models.users[req.context.me.id])
-})
-
-app.get('/users', (req, res) => {
-  return res.send(Object.values(req.context.models.users))
-})
-
-app.get('/users/:userId', (req, res) => {
-  return res.send(req.context.models.users[req.params.userId])
-})
-
-app.get('/messages', (req, res) => {
-  return res.send(Object.values(req.context.models.messages))
-})
-
-app.get('/messages/:messageId', (req, res) => {
-  return res.send(req.context.models.messages[req.params.messageId])
-})
-
-app.post('/messages', (req, res) => {
-  const id = uuidv4()
-  const message = {
-    id,
-    text: req.body.text,
-    userId: req.context.me.id
+connectDb().then(async () => {
+  if (eraseDataonSync) {
+    await Promise.all([
+      models.User.deleteMany({}),
+      models.Message.deleteMany({})
+      ]);
   }
 
-  req.context.models.messages[id] = message
+  createUsersWithMessages()
 
-  return res.send(message)
-})
-
-app.delete('/messages/:messageId', (req, res) => {
-  const {
-    [req.params.messageId]: message,
-    ...otherMessages
-  } = req.context.models.messages
-
-  req.context.models.messages = otherMessages
-
-  return res.send(message)
-})
-
-app.listen(PORT, () =>
+  app.listen(PORT, () =>
   console.log(`example app listening on port ${PORT}!`)
 )
+})
+
+const createUsersWithMessages = async () => {
+  const user1 = new models.User({
+    username: 'palvolus'
+  })
+
+  const user2 = new models.User({
+    username: 'ddavids',
+  });
+
+  const message1 = new models.Message({
+    text: 'Sudying Nodeeee and DBssss',
+    user: user1.id,
+  });
+
+
+  const message2 = new models.Message({
+    text: 'Happy to release ...',
+    user: user2.id,
+  });
+ 
+  const message3 = new models.Message({
+    text: 'Published a complete ...',
+    user: user2.id,
+  });
+ 
+  await message1.save();
+  await message2.save();
+  await message3.save();
+
+  await user1.save()
+  await user2.save()
+}
 
 console.log('hello Node.js project')
 console.log(process.env.MY_SECRET)
