@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title> Cities Pollution </title>
+</head>
+
+<body>
+    <script>
+    const url = 'http://localhost:3000/cities'
+    fetch(url).then(res => res.json()).then(cities => console.log(cities))
+    </script>
+</body>
+
+</html>

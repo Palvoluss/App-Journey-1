@@ -24,16 +24,16 @@ The project is pretty simple, i have to build a Node.js app which helps to repor
 
 ### Day 0
 
-**Date:** 03 March  
+📅 **Date:** 03 March  
 The first day of working, just planning and looking source around. Just try to sketch the app and his function
 
 <img src="READMEimg/51.jpg" alt="First day notes" height="450" />
 
-*Hours Spent:* 2
+⌛ *Hours Spent:* 2
 
 ### Day 1
 
-**Date:** 04 March  
+📅 **Date:** 04 March  
 i've started to lay down a plan for the app, initialized folder, installed some packages and made a basic routing. 
 
 I've studied how to *design schemas* in MongoDB and i leave you two usefull resource:  
@@ -47,11 +47,11 @@ I've studied how to *design schemas* in MongoDB and i leave you two usefull reso
 
 Then i sketched out the first sample of schemas that you can find in sample.js and i've searched how to find the nearest location in using the coords of cites and photos, stackoverflow gave me an [hint!](https://stackoverflow.com/questions/36534879/how-to-find-data-of-nearest-location-from-mongodb-collection-using-mongoose)
 
-*Hours Spent:* 3
+⌛ *Hours Spent:* 3
 
 ### Day 2  
 
-**Date:** 05 March
+📅 **Date:** 05 March
 
 Today i've tried to bring in my code a little more *consistency*, this morning i wasn't very productive so i need a way too better evaluate my effort. So i've searched a common way to build RESTful App with Node.js and guess what?  
 
@@ -75,11 +75,11 @@ This series of tuts was what i needed, a *fil rouge* between everything. As you 
 
 See ya tomorrow!
 
-*Hours Spent:* 4
+⌛ *Hours Spent:* 4
 
 ### Day 3
 
-**Date:** 08 March  
+📅 **Date:** 08 March  
 Finished @rwieruch tuts. So now i have a clear plan on how to go on by myself. Was very useful reading the [Expess advanced routing](https://expressjs.com/en/guide/routing.html) article on Express.js docs. Here some notes: 
 
 <img src="READMEimg/54.jpg" alt="Advanced Routing Notes" height="450" />  
@@ -91,8 +91,25 @@ Not much to say anymore, for tomorrow i plan to:
 
 **What I've learned today:** I finally get a full overview on how a RESTful API App works, Advanced and Module routing with express, handling error in api request, some new query with Mongoose.
 
-*Hours Spent:* 3
+⌛ *Hours Spent:* 3
 
+### Day 4
+
+📅 **Date:** 09 March  
+Today was about learning how to have a correct and useful folder hierarchy, difference between <code>import</code> and <code>request</code>, learning something about [validation](https://mongoosejs.com/docs/validation.html), understanding [CORS](https://developer.mozilla.org/it/docs/Web/HTTP/CORS) and his node [package](https://www.npmjs.com/package/cors) and how to make server able to allow every request so i could make an index.html with a fetch request and finally read about Multer.
+
+Btw the most time consuming part was learning how to correctly implement a beautiful and useful folder and file hierarchy. It's pretty useful understand how a Node.js RESTful API app should be *"layered"*, i've read a lot of articles but [this one](https://www.coreycleary.me/project-structure-for-an-express-rest-api-when-there-is-no-standard-way) was the one which explain better how to build a solid, scalable and testable boilerplate for your RESTful app. 
+
+<img src="READMEimg/55.jpg" alt="Node App Layer" height="450" />  
+
+So with my notes in mind for tomorrow i plan to:
+* 🏗️ correct the actual hierarchy of my file, dividing them into modules
+* 💾 implement every api i need based on user flow of the site
+* 🔎 maybe authentication 
+
+⌛ *Hours Spent:* 4h 45m
+
+***TOTAL HOUR:*** 16h 45m
 ---
 
 

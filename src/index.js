@@ -1,18 +1,27 @@
 import 'dotenv/config'
 import cors from 'cors'
 import express from 'express'
+import path from 'path'
 import routes from './routes'
+
+const fs = require('fs').promises
 
 import models, { connectDb } from './models'
 
 const app = express()
 const PORT = process.env.SECRET_PORT || 3010
 
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+// APPLICATION LEVEL MIDDLEWARE 
+
+// Third part middleware
 
 app.use(cors())
 
+// Built-in middleware
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+// Custom middleware
 app.use(async (req, res, next) => {
   req.context = {
     models,
@@ -21,13 +30,18 @@ app.use(async (req, res, next) => {
   next()
 })
 
+// ROUTING
+
 app.use('/session', routes.session)
 app.use('/users', routes.user)
 app.use('/messages', routes.message)
+app.use('/cities', routes.cities)
 
 app.use((error, req, res, next) => {
   return res.status(500).json({ error: error.toString() })
 })
+
+// FUNCTION
 
 const eraseDataonSync = true
 
@@ -48,11 +62,13 @@ connectDb().then(async () => {
 
 const createUsersWithMessages = async () => {
   const user1 = new models.User({
-    username: 'palvolus'
+    username: 'palvolus',
+    email: 'ciao@prova.it'
   })
 
   const user2 = new models.User({
     username: 'ddavids',
+    email: 'virglilo@prova.it'
   });
 
   const message1 = new models.Message({
