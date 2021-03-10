@@ -4,7 +4,7 @@
   "description": "My project for start2impact about  node.js ",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec babel-node src/index.js"
+    "start": "nodemon --exec babel-node src/app.js"
   },
   "author": "Pablomicheletti",
   "license": "MIT",

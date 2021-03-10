@@ -109,7 +109,20 @@ So with my notes in mind for tomorrow i plan to:
 
 ⌛ *Hours Spent:* 4h 45m
 
-***TOTAL HOUR:*** 16h 45m
+### Day 5
+
+📅 **Date:** 10 March  
+Today was very hard 🥵, i've passed most of time coding new routes and mongoose schema and modules, i've not finished yet probably i'm going to finish tomorrow all the *business logic* (hopefully). In this commit I've also delete the src folder and make a new one, to clear this repo. 
+
+The plain for tomorrow is the same of yesterday:
+
+* 🏗️ Finish the Business Logic
+* 💾 implement every api i need based on user flow of the site 
+* 📤 implement photo upload with [Multer](https://www.geeksforgeeks.org/upload-and-retrieve-image-on-mongodb-using-mongoose/)
+
+⌛ *Hours Spent:* 4h
+
+***TOTAL HOUR:*** 20h 45m
 ---
 
 
