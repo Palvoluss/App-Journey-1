@@ -23,6 +23,10 @@ const PollutionSchema = new mongoose.Schema(
     post_by: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User'
+    },
+    loc: {
+      type: String,
+      coordinates: [Number]
     }
 
   },

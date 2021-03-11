@@ -122,7 +122,22 @@ The plain for tomorrow is the same of yesterday:
 
 ⌛ *Hours Spent:* 4h
 
-***TOTAL HOUR:*** 20h 45m
+### Day 6
+
+📅 **Date:** 11 March  
+Nothing changed from yesterday. Still stuggling with the business logic. I've tried to do the first POST request for poulate the db with a new City but it doesen't work, probably I'm wrong with embedding GeoSchema in the other models!
+
+If I can get where i'm wrong with this tomorrow I'll be able to start routing an controllers to complete the APIs.
+
+More or less I'll stick to the plan:
+
+* 🏗️ Finish the Business Logic
+* 💾 implement every api i need based on user flow of the site 
+* 📤 implement photo upload with [Multer](https://www.geeksforgeeks.org/upload-and-retrieve-image-on-mongodb-using-mongoose/)
+
+⌛ *Hours Spent:* 3h 30m 
+
+***TOTAL HOUR:*** 24h 15m
 ---
 
 

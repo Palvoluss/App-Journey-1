@@ -1,4 +1,4 @@
-
+// const GeoSchema = require('../database/geolocation').schema
 import mongoose from 'mongoose'
 
 const CitySchema = new mongoose.Schema(
@@ -13,26 +13,26 @@ const CitySchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Pollution'
     },
-    coords: {
-      latitudine: { type: Number },
-      longitudine: { type: Number }
+    geometry: {
+    type: {
+      type: String,
+      default: 'Point'
+    },
+    coordinates: {
+      type: [Number],
+      index: '2dshpere'
     }
+  }
   }
 )
 
 // Vitrtuals
 
-CitySchema
-  .virtual('coordinates')
-  .get(function () {
-    return this.latitudine + ';' + this.longitudine
-  })
-
-CitySchema
-  .virtual('url')
-  .get(function () {
-    return '/cities/' + this._id
-  })
+// CitySchema
+//   .virtual('url')
+//   .get(function () {
+//     return '/cities/' + this._id
+//   })
 
 // Export model
 export default mongoose.model('City', CitySchema)
