@@ -1,26 +1,22 @@
-import { Router } from 'express'
-const router = Router()
-const City = require('../database/city')
+const express = require('express')
+const router = express.Router()
 
-import path from 'path'
-const fs = require('fs').promises
+const city = require('../database/city')
 
-router.get('/', async function listCities (req, res) {
-  const citiesFile = path.join(__dirname, '../../italian-cities.json')
-  try {
-    const data = await fs.readFile(citiesFile)
-    res.json(JSON.parse(data))
-  } catch (err) {
-    res.status(500).json({ error: err.message })
-  }
+// get city list
+
+router.get('/', function (req, res, next) {
+  city.find({}).then(function(cities){
+    res.send(cities)
+  })
 })
 
 // add city
 
-router.post('/cities', function (req, res, next) {
-  City.create(req.body).then(function(city){
-    res.send(city)
+router.post('/', function (req, res, next) {
+  city.save(req.body).then(function (e) {
+    res.send(e)
   }).catch(next)
 })
 
-export default router
+module.exports = router

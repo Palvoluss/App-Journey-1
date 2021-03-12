@@ -137,7 +137,17 @@ More or less I'll stick to the plan:
 
 ⌛ *Hours Spent:* 3h 30m 
 
-***TOTAL HOUR:*** 24h 15m
+### Day 7
+Struggling with router.post and importing and exporting with ES6. I've decided to use default Node.js method for importing and exporting modules because atm i can't understand how correctly import and export modules and schema. Furthermore i'm struggling with save data on MongoDB and probably i'm wrong the mongoose query, because i thing i can save on the db whit .create(req.body).
+
+No plan for the weekend! I just need to figure out how to save data on database with a post request
+
+📅 **Date:** 12 March  
+
+
+⌛ *Hours Spent:* 4h 
+
+***TOTAL HOURS:*** 28h 15m
 ---
 
 

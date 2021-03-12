@@ -5,24 +5,22 @@ const CitySchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
-      maxlenght: 100,
-      lowercase: true
+      required: [true, 'We should call you in some way']
     },
     pollution: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Pollution'
     },
     geometry: {
-    type: {
-      type: String,
-      default: 'Point'
-    },
-    coordinates: {
-      type: [Number],
-      index: '2dshpere'
+      type: {
+        type: String,
+        default: 'Point'
+      },
+      coordinates: {
+        type: [Number],
+        index: '2dshpere'
+      }
     }
-  }
   }
 )
 
@@ -35,4 +33,4 @@ const CitySchema = new mongoose.Schema(
 //   })
 
 // Export model
-export default mongoose.model('City', CitySchema)
+module.exports = mongoose.model('city', CitySchema)
