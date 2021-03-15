@@ -152,7 +152,7 @@ No plan for the weekend! I just need to figure out how to save data on database 
 📅 **Date:** 15 March  
 Finally I was able to send data correctly to the database!
 
-<img src="READMEimg/db.jpg" alt="Frist data send to database" height="450" />  
+<img src="READMEimg/db.png" alt="Frist data send to database" height="450" />  
 
 First thing first I need to say that I get some trouble with Postman because I couldn't send raw body with post request, don't know why but the body of the request made with Postman was every time empty, so I decided to use curl: 
 ``` 
