@@ -147,7 +147,48 @@ No plan for the weekend! I just need to figure out how to save data on database 
 
 ⌛ *Hours Spent:* 4h 
 
-***TOTAL HOURS:*** 28h 15m
+### Day 8
+
+📅 **Date:** 15 March  
+Finally I was able to send data correctly to the database!
+
+<img src="READMEimg/db.jpg" alt="Frist data send to database" height="450" />  
+
+First thing first I need to say that I get some trouble with Postman because I couldn't send raw body with post request, don't know why but the body of the request made with Postman was every time empty, so I decided to use curl: 
+``` 
+curl -d '{
+    "name": "Lucchio",
+    "geometry" : { "type": "point", "coordinates": [44.037,10.7165]
+    }
+  }' -H 'Content-Type: application/json' http://localhost:3000/cities
+```
+With curl I succed to send data but I had another error with MongoDB that i resolved deleting the ``` &w=majority``` from the MongoDb connection link. From there everything worked fine and i was able to send data with post request also with Postman using the ``` x-www-form-urlencoded``` tab instead the ```raw``` tab.
+
+Regarding the request code, I've changed the Mongoose method to ```.save()``` because the wrap also the ```.create()``` but i think that the major error was the two said before. I've also change the error handling with a callback and that's the result!
+
+```
+router.post('/', (req, res, next) => {
+  console.log('body:', req.body)
+  const newCity = new City(req.body)
+  newCity.save((err, doc) => {
+    if (err) console.log(err)
+    else {
+      console.log(doc)
+      return res.json({
+        msg: 'data recivied and saved'
+      })
+    }
+  })
+})
+```
+From there I've started to build a complete router sistem and i've to finish it. Probably from tomorrow I'm starting to separate *router* from *controllers* to have a more clean code. And that's all folks! Seee you tomorrow!!
+
+* 🏗️ Finish the Business Logic
+
+⌛ *Hours Spent:* 2h 45m 
+
+
+***TOTAL HOURS:*** 31h
 ---
 
 

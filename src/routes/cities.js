@@ -1,22 +1,42 @@
 const express = require('express')
 const router = express.Router()
 
-const city = require('../database/city')
+const City = require('../database/city')
 
 // get city list
-
 router.get('/', function (req, res, next) {
-  city.find({}).then(function(cities){
+  City.find({}).then(function (cities) {
     res.send(cities)
   })
 })
 
 // add city
-
-router.post('/', function (req, res, next) {
-  city.save(req.body).then(function (e) {
-    res.send(e)
-  }).catch(next)
+router.post('/', (req, res, next) => {
+  console.log('body:', req.body)
+  const newCity = new City(req.body)
+  newCity.save((err, doc) => {
+    if (err) console.log(err)
+    else {
+      console.log(doc)
+      return res.json({
+        msg: 'data recivied and saved'
+      })
+    }
+  })
 })
+
+// router.post('/', (req, res) => {
+//   console.log('body:', req.body)
+//   const newCity = new City(req.body)
+//   newCity.save((err) => {
+//     if (err) {
+//       res.status(500).json({ msg: 'sorrryyyyyy' })
+//       return
+//     }
+//     return res.json({
+//         msg: 'data recivied and saved'
+//       })
+//   })
+// })
 
 module.exports = router

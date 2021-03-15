@@ -38,9 +38,7 @@ const UserSchema = new mongoose.Schema(
 
 // Virtuals
 
-// Exports
-
-export default mongoose.model('User', UserSchema)
+module.exports = mongoose.model('User', UserSchema)
 
 
 

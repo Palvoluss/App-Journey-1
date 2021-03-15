@@ -38,4 +38,4 @@ const PollutionSchema = new mongoose.Schema(
 // Vitrtuals
 
 // Export model
-export default mongoose.model('Pollution', PollutionSchema)
+module.exports = mongoose.model('Pollution', PollutionSchema)
