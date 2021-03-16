@@ -199,10 +199,10 @@ So the plan is the same of the last week more or less ahaha
 * 🖼️ Make components and some css and contine with templating the other pages 
 
 
-⌛ *Hours Spent:* 4h 
+⌛ *Hours Spent:* 1h 30m 
 
 
-***TOTAL HOURS:*** 31h
+***TOTAL HOURS:*** 32h 30m
 ---
 
 
