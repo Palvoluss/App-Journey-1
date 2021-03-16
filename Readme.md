@@ -187,6 +187,20 @@ From there I've started to build a complete router sistem and i've to finish it.
 
 ⌛ *Hours Spent:* 2h 45m 
 
+### Day 9
+
+📅 **Date:** 16 March  
+Not a productive day! I've start to make some template with ejs just to move my mind from controllers and router. 
+I think I'm going to do a render, then the router and finally the controller just to not get out crazy 🤯
+
+So the plan is the same of the last week more or less ahaha
+
+* 🏗️ Continue the Business Logic
+* 🖼️ Make components and some css and contine with templating the other pages 
+
+
+⌛ *Hours Spent:* 4h 
+
 
 ***TOTAL HOURS:*** 31h
 ---

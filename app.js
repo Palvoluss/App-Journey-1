@@ -2,15 +2,25 @@ import 'dotenv/config'
 import cors from 'cors'
 
 const express = require('express')
+const expressLayouts = require('express-ejs-layouts')
 const path = require('path')
 const bodyParser = require('body-parser')
 const router = express.Router()
 
+
 const app = express()
 const PORT = process.env.SECRET_PORT || 3010
 
+// Static Files
+app.use(express.static('public'))
+app.use('/css', express.static(__dirname + 'public/css'))
+app.use('/img', express.static(__dirname + 'public/img'))
+
+// Template Engine
+app.set('view engine', 'ejs')
+
 // Connecting to db
-import models, { connectDb } from './database'
+import models, { connectDb } from './src/database'
 connectDb()
 
 // Application Level middleware
@@ -24,14 +34,18 @@ app.use(router)
 
 // Importing modules
 
-const citiesRouter = require('./routes/cities')
-const pollutionRouter = require('./routes/pollution')
-const usersRouter = require('./routes/users')
+const citiesRouter = require('./src/routes/cities')
+const pollutionRouter = require('./src/routes/pollution')
+const usersRouter = require('./src/routes/users')
 
 // Custom middleware
 app.use('/cities', citiesRouter)
 app.use('/pollution', pollutionRouter)
 app.use('/users', usersRouter)
+
+app.get('/', (req, res) => {
+  res.render('index')
+})
 
 connectDb()
 
