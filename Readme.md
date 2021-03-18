@@ -212,13 +212,13 @@ It's pretty awful coding without a feedback on what are you doing, so two days a
 So what I've done is essentially the implementation with EJS, doing also some styiling with css (but i don't like it, in the next days i'm going to do something different) and I've added a Blog section and I've completed all the APIs needed. I'm on a good way and in a good mood, I think that i'll need 2 or 3 days more to complete the app! 
 
 Here some screenshot from my Iphone of the app:  
-<img src="READMEimg/22.png" alt="Screenshot of the App From Phone 1" height="300" />
-<img src="READMEimg/23.png" alt="Screenshot of the App From Phone 2" height="300" />
-<img src="READMEimg/24.png" alt="Screenshot of the App From Phone 3" height="300" />
+<img src="READMEimg/22.PNG" alt="Screenshot of the App From Phone 1" height="300" />
+<img src="READMEimg/23.PNG" alt="Screenshot of the App From Phone 2" height="300" />
+<img src="READMEimg/24.PNG" alt="Screenshot of the App From Phone 3" height="300" />
 
 ⌛ *Hours Spent:* 4h 
 
-***TOTAL HOURS:*** 32h 30m
+***TOTAL HOURS:*** 36h 30m
 ---
 
 ## Side Note
@@ -226,22 +226,23 @@ Here some screenshot from my Iphone of the app:
 I just want to add some suggestion here, to study consistently. I've found it pretty difficult and I want to share with you how I can get focused for 2 hours straight. I use an app calld Forest, it's very helpful for me because with it i can track my activities and i can stay focused without many distracion.
 
 
-<img src="READMEimg/25.png" alt="Forest App Screenshot 1" height="300" />
-<img src="READMEimg/26.png" alt="Forest App Screenshot 2" height="300" />
-<img src="READMEimg/27.png" alt="Forest App Screenshot 3" height="300" />
-<img src="READMEimg/28.png" alt="Forest App Screenshot 4" height="300" />  
+<img src="READMEimg/25.PNG" alt="Forest App Screenshot 1" height="300" />
+<img src="READMEimg/26.PNG" alt="Forest App Screenshot 2" height="300" />
+<img src="READMEimg/27.PNG" alt="Forest App Screenshot 3" height="300" />
+<img src="READMEimg/28.PNG" alt="Forest App Screenshot 4" height="300" />  
 
 I usually make session of 2 hours but you can choose the time amount you prefer. And the best thing have this app is the *iperfocus* mode, it means that you can't exit the app or the little tree will dead.
 
-<img src="READMEimg/29.png" alt="Forest App Screenshot 5" height="300" />  
+<img src="READMEimg/29.PNG" alt="Forest App Screenshot 5" height="300" />  
 
 Why i want to share this tips with you? Because in the last week I'm not felt very productive and many times I thought that I'm wasting time. I wasn't using the app in the *iperfocus* mode and very often i took the phone and got distracting. So today i've restarting to use the app in *iperfocus* mode and i felt a lot more productive and i think that i was very productive, because i've been always focused on the app and the 4 hours of today flew away! So what i want to say is:
 
 > It's better to stay focused for a little time than works a lot of hours distracted.
 
-Hope u'll find my tips usefull and if you're going to download the app here's is my redeem code to have some little money to buy a little tree! 🌲
- 📱 - https://forestapp.cc/download/it
- 🌻 - 4YAPR9SG
+Hope u'll find my tips usefull and if you're going to download the app here's is my redeem code to have some little money to buy a little tree! 🌲  
+
+* 📱 - https://forestapp.cc/download/it
+* 🌻 - 4YAPR9SG
 
 ---
 
