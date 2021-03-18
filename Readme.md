@@ -223,9 +223,7 @@ Here some screenshot from my Iphone of the app:
 
 ## Side Note
 
-I just want to add some suggestion here, to study consistently. I've found it pretty difficult and I want to share with you how I can get focused for 2 hours straight. I use an app calld Forest, it's very helpful for me because with it i can track my activities and i can stay focused without many distracion.
-
-
+I just want to add some suggestion here, to study consistently. I've found it pretty difficult and I want to share with you how I can get focused for 2 hours straight. I use an app calld Forest, it's very helpful for me because with it i can track my activities and i can stay focused without many distracion.  
 <img src="READMEimg/25.PNG" alt="Forest App Screenshot 1" height="300" />
 <img src="READMEimg/26.PNG" alt="Forest App Screenshot 2" height="300" />
 <img src="READMEimg/27.PNG" alt="Forest App Screenshot 3" height="300" />
