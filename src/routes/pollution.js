@@ -25,6 +25,10 @@ router.post('/', (req, res, next) => {
   })
 })
 
+router.get('/upload', (req, res) =>{
+  res.render('upload', { title: 'Upload Pollution' })
+})
+
 // update Pollution
 // TO DO
 module.exports = router
