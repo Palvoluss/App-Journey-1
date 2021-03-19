@@ -11,8 +11,8 @@ const PollutionSchema = new mongoose.Schema(
       }
     },
     photo: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Photo'
+      type: String,
+      required: true
     },
     description: {
       type: String,

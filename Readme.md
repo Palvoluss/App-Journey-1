@@ -218,7 +218,22 @@ Here some screenshot from my Iphone of the app:
 
 ⌛ *Hours Spent:* 4h 
 
-***TOTAL HOURS:*** 36h 30m
+### Day 11
+
+📅 **Date:** 19 March  
+
+Nothing much different from yesterday, I'm continuing to build the business logic and make all the routing with the views. In the last two hours I've started to take a deep look to multer and check how i can implement it. The bigger problem I had, was that i couldn't find any example of multer integration with an existing schema and I'm still searching how to do the POST request with the file upload and the body upload, to make the complete *pollution card*.
+
+That's all for today.
+
+To do list:
+* 🏗️ Continue the Business Logic
+* 🤿 Deepen the *file upload* and *authentication* method, for implement them next week
+* 🖼️ Sketch some css to make al nicer
+
+⌛ *Hours Spent:* 4h 
+
+***TOTAL HOURS:*** 40h 30m
 ---
 
 ## Side Note

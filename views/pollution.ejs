@@ -1,0 +1,31 @@
+<html lang="en">
+
+ 	<%- include('./partials/head.ejs') %>
+
+ <body>
+
+ 	<%- include('./partials/nav.ejs') %>
+
+
+ 	<div class="pollution content">
+ 		<h2>💀 - Pollution List</h2>
+
+ 		<% if (pollutions.length > 0) { %>
+ 			<% pollutions.forEach(pollution => { %>
+ 				<a class="single" href="/pollution/<%= pollution._id %>">
+		 			<h3> <%= pollution.pollution_type %></h3>
+		 			<p> <%= pollution.description %></p>
+		 		</a>
+	 			<% }) %>
+ 		<% } else { %>
+
+ 			<p>There are no pollution to display..</p>
+
+ 		<% } %>
+ 	</div>
+
+ </body>
+
+ 	<%- include('./partials/footer.ejs') %> 
+
+ </html>

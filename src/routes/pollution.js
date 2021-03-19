@@ -1,33 +1,17 @@
 const express = require('express')
 const router = express.Router()
 
-const Pollution = require('../database/pollution')
+const pollutionController = require('../controllers/pollutionControllers')
 
-// get Pollution list
-router.get('/', function (req, res, next) {
-  Pollution.find({}).then(function (poll) {
-    res.send(poll)
-  })
-})
+// Pollution list by GET
+router.get('/', pollutionController.pollution_list)
 
-// add Pollution
-router.post('/', (req, res, next) => {
-  console.log('body:', req.body)
-  const newPollution = new Pollution(req.body)
-  newPollution.save((err, doc) => {
-    if (err) console.log(err)
-    else {
-      console.log(doc)
-      return res.json({
-        msg: 'data recivied and saved'
-      })
-    }
-  })
-})
+// Pollution Upload by GET
+router.get('/upload', pollutionController.pollution_upload_get)
 
-router.get('/upload', (req, res) =>{
-  res.render('upload', { title: 'Upload Pollution' })
-})
+// Pollution Upload by POST
+router.post('/upload', pollutionController.pollution_upload_post)
+
 
 // update Pollution
 // TO DO
