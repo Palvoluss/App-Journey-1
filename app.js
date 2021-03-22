@@ -16,6 +16,7 @@ const PORT = process.env.SECRET_PORT || 3010
 
 // Static Files
 app.use(express.static('public'))
+app.use('/uploads', express.static('uploads'))
 
 // Template Engine
 app.set('view engine', 'ejs')

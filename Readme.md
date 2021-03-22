@@ -9,6 +9,7 @@ I'm Pablo, in this repository i'm going to record my entire process of creating 
 - [Rules](#rules)
 - [The Project](#the-project)
 - [Day Zero](#day-0)
+- [Side Notes](#side-notes)
 - [About Me](#about-me)
 
 
@@ -18,7 +19,7 @@ I'll try to commit every day with more data possibile, like hours spent, which s
 
 ## The Project
 
-The project is pretty simple, i have to build a Node.js app which helps to report polluted place near your geolocalization. Isn't required a UI, but is required to build APIs, make possible photo upload to show the pollution and upload the coords.
+The project is pretty simple, i have to build a Node.js app which helps reporting polluted places/areas near you with the help of geolocalization. Isn't required a UI, but is required to build APIs, make possible photo upload to show the pollution and upload the coords.
 
 ---
 
@@ -233,10 +234,33 @@ To do list:
 
 ⌛ *Hours Spent:* 4h 
 
-***TOTAL HOURS:*** 40h 30m
+### Day 12
+
+📅 **Date:** 22 March  
+
+*Habemus uploads!* Yay, that's it, with multer now i'm able to upload photo up to 5 MB to the server. I found out that it's also possible to upload photo directly to the DB but i'll drop it, for now. I resolved the problem of *day 11* with a simple call back
+```
+// Pollution Upload by POST
+router.post('/upload', upload.single('photoInput'), pollutionController.pollution_upload_post)
+```
+Then i moved on a new **task**: append coordinates to the photo using a botton that enable geolocatio. Seems really simple, and it is but i have the problem that the connection in localhost block the browser's geolocation APIs. I could drop it too but i decided to deploy the app with Ngnix to my DigitalOcean server. 
+
+So se you tomorrow with server side updates! 
+
+To do list:
+* 🏗️ Continue the Business Logic (Pollution, User)
+* 🖥️ Deploy the app with Ngnix 
+* 🤿 Deepen *authentication* method, because is not hard enough yet
+* 🖼️ Sketch some css to make all nicer
+
+⌛ *Hours Spent:* 4h (but with this readme too, so for today let's consider just 3h and 30m) 
+
+***TOTAL HOURS:*** 44h
 ---
 
-## Side Note
+## Side Notes
+
+### How to stay focused
 
 I just want to add some suggestion here, to study consistently. I've found it pretty difficult and I want to share with you how I can get focused for 2 hours straight. I use an app calld Forest, it's very helpful for me because with it i can track my activities and i can stay focused without many distracion.  
 <img src="READMEimg/25.PNG" alt="Forest App Screenshot 1" height="300" />
@@ -256,6 +280,12 @@ Hope u'll find my tips usefull and if you're going to download the app here's is
 
 * 📱 - https://forestapp.cc/download/it
 * 🌻 - 4YAPR9SG
+
+### Digital Ocean referrals
+
+I'll leave here my Digital Ocean referral links so we can help each other to get some online space to deploy our project!
+
+* 🖥️ - https://m.do.co/c/069a6108b50b
 
 ---
 

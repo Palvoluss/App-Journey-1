@@ -11,6 +11,9 @@
       <label for="description">Pollution description:</label>
       <input type="text" id="description" name="description" required>
       <input type="file" name="photoInput" id="photo">
+      <button class="geo_btn">Append Coords</button>
+      <input type="text" id="coords" name="loc" required>
+
       <button>Submit</button>
     </form>
     <hr />
@@ -18,6 +21,25 @@
           <div class="preview-images"></div>
       </div>
   </div>
-  <%- include("./partials/footer.ejs") %>
+
+
 </body>
+
+<script type="text/javascript"> 
+  const useGeolocation = document.querySelector('.geo_btn')
+    useGeolocation.addEventListener('click', userGeo)
+
+  function userGeo () {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      latitude = position.coords.latitude
+      longitude = position.coords.longitude
+      document.getElementById('coords').value = (latitude +','+ longitude)
+    })
+  }
+
+  
+  </script>
+
+
+  <%- include("./partials/footer.ejs") %>
 </html>
