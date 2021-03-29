@@ -5,19 +5,21 @@
   <%- include("./partials/nav.ejs") %>
 
   <div class="details content">
-    <h2><%= blog.title %></h2>
-    <h4><%= blog.snippet %></h4>
+    <h2><%= pollution.pollution_type %></h2>
+    <h4><%= pollution.description %></h4>
     <div class="content">
-      <p><%= blog.body %></p>
+      <p><%= pollution.loc %></p>
+      <p><%= pollution.status %></p>
+      <img src= "../<%= pollution.photo %>" >
     </div>
-     <a class="delete" data-doc="<%= blog._id %>">
+     <a class="delete" data-doc="<%= pollution._id %>">
       Delete
     </a> 
   </div>
 <script>
 const trashcan = document.querySelector('a.delete')
 trashcan.addEventListener('click', (e) => {
-  const endpoint = `/blogs/${trashcan.dataset.doc}`
+  const endpoint = `/pollution/delete/${trashcan.dataset.doc}`
   fetch(endpoint, { method: 'DELETE'})
     .then(response => response.json())
     .then(data => window.location.href = data.redirect)

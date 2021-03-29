@@ -34,6 +34,7 @@ app.use(router)
 
 // Importing modules
 
+const ApiV = 'api/v1'
 const citiesRouter = require('./src/routes/cities')
 const pollutionRouter = require('./src/routes/pollution')
 const usersRouter = require('./src/routes/users')

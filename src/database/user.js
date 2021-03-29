@@ -36,8 +36,6 @@ const UserSchema = new mongoose.Schema(
     timestamps: true
   })
 
-// Virtuals
-
 module.exports = mongoose.model('User', UserSchema)
 
 

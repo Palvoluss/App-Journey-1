@@ -255,7 +255,63 @@ To do list:
 
 ⌛ *Hours Spent:* 4h (but with this readme too, so for today let's consider just 3h and 30m) 
 
-***TOTAL HOURS:*** 44h
+### Day 13
+
+📅 **Date:** 29 March  
+
+Hiiii Fellas! Was a huuuuge week, i didn't code so much so let's start this week in the right way. First thing first a huge ToDo list i've made: 
+
+To do list:
+* 🍥 Make Routing Version: /api/v1/'api name'
+* 🔎 Implement Schema Validation Object with mongoose (Almost done)
+* 🏗️ Pollution APIs:
+  * ~GET~
+  * ~POST~
+  * ~DELETE~
+  * UPDATE -> Can't make it work, gave the resault on a different id
+* 📺 Pollution RENDER:
+  * ~GET all and speccific~
+  * ~POST~
+  * ~DELETE~
+  * UPDATE
+*  🏗️ Cities APIs:
+  *  ~Make controllers~
+  *  ~GET (Cities list)~
+*  📺  Cities RENDER
+  *  GET (Cities list) searching a good way to show all the cities and the nearest pollution
+* 📊 Find a way to show nearest pollution
+* 🏗️  User APIs:
+  * GET (userlist)
+  * POST (singup) 
+    * Delete pass from post
+    * Hash the password
+  * POST (login)
+    * bcrypt.compare
+    * validationToken 
+  * DELETE (:id)
+* 📺  User RENDER:
+  * GET (userlist)
+  * POST (singup) 
+    * Delete pass from post
+    * Hash the password
+  * POST (login)
+    * bcrypt.compare
+    * validationToken 
+  * DELETE (:id)
+* 🖥️ Deploy the app with Ngnix
+  * Almost done
+* 🤿 Deepen *authentication* method, because is not hard enough yet
+* 🖼️ Sketch some css to make all nicer
+
+This morning i've almost complete the Api's for pollution but i had a problem with the update, i don't know why but when i make the request from postman on a specific `id` the update works but on another `ìd`. In the last hour i've looking for a method to show the pollution to the user, probably i'm going to use d3. 
+
+See ya tomorrow!
+
+
+⌛ *Hours Spent:*  4h
+
+
+***TOTAL HOURS:*** 48h
 ---
 
 ## Side Notes

@@ -27,8 +27,12 @@ const PollutionSchema = new mongoose.Schema(
     loc: {
       type: String,
       coordinates: [Number]
+    },
+    status: {
+      type: String,
+      enum: ['Need cleaning!!', 'cleaned the area, GG!'],
+      default: 'Need cleaning!!'
     }
-
   },
   {
     timestamps: true
