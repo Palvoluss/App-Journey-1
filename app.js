@@ -10,6 +10,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const router = express.Router()
 const morgan = require('morgan')
+const cookieParser = require('cookie-parser')
 
 const app = express()
 const PORT = process.env.SECRET_PORT || 3010
@@ -26,6 +27,7 @@ connectDb()
 // Third part middleware
 app.use(morgan('dev'))
 app.use(cors())
+app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
@@ -45,6 +47,7 @@ app.use('/cities', citiesRouter)
 app.use('/pollution', pollutionRouter)
 app.use('/users', usersRouter)
 app.use('/blogs', blogsRouter)
+app.use('/user', usersRouter)
 
 app.get('/', (req, res) => {
   res.render('index', { title: 'Home'})

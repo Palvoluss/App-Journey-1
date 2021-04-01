@@ -22,24 +22,20 @@ const UserSchema = new mongoose.Schema(
       type: String,
       maxlenght: 500
     },
-    profileImage: {
-      type: String
-    },
-    uploads: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Pollution'
-    },
-    hash: String,
-    salt: String
+    password: {
+      type: String,
+      required: [true, "can't be blank"],
+      minlength: [6, 'Minimum password length is 6 characters']
+    }
   },
   {
-    timestamps: true
+    timestamps: true,
+    toObject: function (doc, ret, options) {
+      delete ret.password
+    }
   })
 
 module.exports = mongoose.model('User', UserSchema)
-
-
-
 
 
 
