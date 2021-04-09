@@ -1,12 +1,38 @@
-<nav>
- 	<div clas="site-title">
- 		<a href="/"><h1>Pablo's Pollution App</h1></a>
- 		<p>A RESTful Node.js project for start2impact</p>
- 	</div>
- 	<ul>
- 		<li><a href="/">Home</a></li>
- 		<li><a href="/pollution">Pollution List</a></li>
- 		<li><a href="/cities">Cities Database</a></li>
- 		<li><a href="/blogs">Blog</a></li>
- 	</ul>
-</nav>
+<div>
+	<div class="head">
+			<div class="head left">
+				<div class="menu">
+				👻
+			</div>
+			<div class="head">
+				<h1>Pablo's Pollution App</h1>
+			</div>
+		</div>
+		<div class="auth">
+			<% if (user) { %>
+        	Welcome, <%= user.username %>
+        	<a href="/user/logout">Log out</a>
+     	 	<% } else { %>
+        	<a href="/user/login">Log in</a>
+        	<a href="/user/singup" class="button">Sign up</a>
+      		<% } %>
+		</div>
+	</div>
+	<div class="cover"></div>
+	<div class="navigator">
+		
+		<div class="icon">🖥️</div>
+		<div class="info">
+			<div class="page title">
+				<h2> <%= title %> </h2>
+			</div>
+			<div class="links">
+				<a href="/">Home</a>
+	 			<a href="/pollution">Pollution List</a>
+	 			<a href="/pollution/where">Near Me Pollution</a>
+	 			<a href="/blogs">Blog</a>
+			</div>
+		</div>
+	</div>
+
+</div>

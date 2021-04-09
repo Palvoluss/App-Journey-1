@@ -3,16 +3,17 @@
 
 <body>
   <%- include("./partials/nav.ejs") %>
+  <div class="addPost">
+    <a class="delete" data-doc="<%= blog._id %>">
+        <h6>🗑️</h6> - Delete Blogpost
+    </a>
+</div>
 
   <div class="details content">
-    <h2><%= blog.title %></h2>
     <h4><%= blog.snippet %></h4>
     <div class="content">
       <p><%= blog.body %></p>
     </div>
-     <a class="delete" data-doc="<%= blog._id %>">
-      Delete
-    </a> 
   </div>
 <script>
 const trashcan = document.querySelector('a.delete')

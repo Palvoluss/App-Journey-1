@@ -4,18 +4,31 @@
 <body>
   <%- include("./partials/nav.ejs") %>
 
-  <div class="details content">
-    <h2><%= pollution.pollution_type %></h2>
-    <h4><%= pollution.description %></h4>
+  <div class="addPost">
+    <a class="addPostSpan" href="">
+        <h6>🧹</h6> - Clean Pollution
+    </a>
+    <a class="delete" data-doc="<%= pollution._id %>">
+        <h6>🗑️</h6> - Delete Pollution
+    </a>
+</div>
+<div class="details content">
+    <h2>
+        <%= pollution.pollution_type %>
+    </h2>
+    <h4>
+        <%= pollution.description %>
+    </h4>
     <div class="content">
-      <p><%= pollution.loc %></p>
-      <p><%= pollution.status %></p>
-      <img src= "../<%= pollution.photo %>" >
+        <p>
+            <%= pollution.loc %>
+        </p>
+        <p>
+            <%= pollution.status %>
+        </p>
+        <img src="../<%= pollution.photo %>" style="width: 70%">
     </div>
-     <a class="delete" data-doc="<%= pollution._id %>">
-      Delete
-    </a> 
-  </div>
+</div>
 <script>
 const trashcan = document.querySelector('a.delete')
 trashcan.addEventListener('click', (e) => {

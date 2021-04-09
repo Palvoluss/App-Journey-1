@@ -1,13 +1,24 @@
 import mongoose from 'mongoose'
 
+const GeoSchema = new mongoose.Schema({
+  type: {
+    type: String,
+    default: 'Point'
+  },
+  coordinates: {
+    type: [Number],
+    index: '2dsphere'
+  }
+})
+
 const PollutionSchema = new mongoose.Schema(
   {
     pollution_type: {
       type: String,
-      required: [true, `can't be blank`],
+      required: [true, 'can\'t be blank'],
       enum: {
         values: ['Land', 'Water', 'Noise', 'Light'],
-        message: 'Pollution types can be: Land, Water, Noise & Light'
+        message: 'Land, Water, Noise or Light'
       }
     },
     photo: {
@@ -24,10 +35,7 @@ const PollutionSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User'
     },
-    loc: {
-      type: String,
-      coordinates: [Number]
-    },
+    geometry: GeoSchema,
     status: {
       type: String,
       enum: ['Need cleaning!!', 'cleaned the area, GG!'],

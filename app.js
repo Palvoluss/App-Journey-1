@@ -41,13 +41,16 @@ const citiesRouter = require('./src/routes/cities')
 const pollutionRouter = require('./src/routes/pollution')
 const usersRouter = require('./src/routes/users')
 const blogsRouter = require('./src/routes/blogs')
+const jwtUtilis = require('./src/utilis/jwtUtilis')
+
+app.all('*', jwtUtilis.checkUser)
 
 // Custom middleware
 app.use('/cities', citiesRouter)
 app.use('/pollution', pollutionRouter)
-app.use('/users', usersRouter)
 app.use('/blogs', blogsRouter)
 app.use('/user', usersRouter)
+
 
 app.get('/', (req, res) => {
   res.render('index', { title: 'Home'})

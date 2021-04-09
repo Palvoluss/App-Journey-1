@@ -5,7 +5,7 @@
   <%- include("./partials/nav.ejs") %>
 
   <div class="create-pollution content">
-    <form action="/pollution/upload" method="POST" enctype="multipart/form-data">
+    <form class="addPoll" action="/pollution/upload" method="POST" enctype="multipart/form-data">
       <label for="pollution_type">Pollution Type:</label>
       <input type="text" id="pollution_type" name="pollution_type" required placeholder="Pollution types can be: Land, Water, Noise & Light">
       <label for="description">Pollution description:</label>
@@ -16,12 +16,7 @@
 
       <button>Submit</button>
     </form>
-    <hr />
-      <div class="row">
-          <div class="preview-images"></div>
-      </div>
-  </div>
-
+  
 
 </body>
 
@@ -33,7 +28,7 @@
     navigator.geolocation.getCurrentPosition(function (position) {
       latitude = position.coords.latitude
       longitude = position.coords.longitude
-      document.getElementById('coords').value = (latitude +','+ longitude)
+      document.getElementById('coords').value = (longitude +','+ latitude)
     })
   }
 

@@ -310,7 +310,7 @@ See ya tomorrow!
 
 ⌛ *Hours Spent:*  4h
 
-### Day 13
+### Day 14
 
 📅 **Date:** 1 April  
 
@@ -361,8 +361,44 @@ See ya tomorrow!
 
 ⌛ *Hours Spent:*  4h
 
+### Day after the 14th
 
-***TOTAL HOURS:*** 52h
+📅 **Date:** 2-9 April  
+
+Sooo lot of updates, so take a sit and follow me:
+I've finally make work all the authentication, now you can *Sign Up* and *Login* with your email and a username. It works well and I was able to make a conditional statement with jwt cookie to show the _login_ / _sing up_ button or *Welcome, Username*/ _log out_ and to authenticate routes so now only logged in user can post a blog or upload a pollution, I've also added a PUT API for pollution, to update the status from *Need cleaning!!* to *'cleaned the area, GG!* and it works pretty well but I need to implement the fetch on the button. 
+I also took a lot of work to make a nicer css, I'm started from [Notion.css](https://fillerink.github.io/notion.css/) by [Sreeram](https://sreeram.codes/) and I've edited what I didn't like and added some classes to make the template I wanted, in the style.css is everything divided so you can look what I've done. I'm almost done, because, at least some litte things that aren't my priority everything works and the last two things I need to do is to get a correct visualization of the pollution/near GET request, and the deploy of the app. Everything I'm not happy with I'll write down below to make a TODO list for the future or for everyone who want to continue this app!
+
+📂  - Notes on todo correction 
+ ┣ 📂 - Views 
+ ┃ ┣ 📂 - Partials -> 🆗
+ ┃ ┣ 📝 - index.ejs -> 🆗
+ ┃ ┣ 📝 - 404.ejs -> 🆗
+ ┃ ┣ 📝 - blogs.ejs -> 🆗
+ ┃ ┃ ┣ 📝 - specificblog.ejs -> Need to add the user who made it
+ ┃ ┃ ┗ 📝 - newblog.ejs -> Is ok but i would like to add markdown control panel to format text
+ ┃ ┣ 📝 - Pollution.ejs -> pretty ok but i would like to find another way to show the "cards"
+ ┃ ┃ ┣ 📝 - specificpollution.ejs -> implement fetch PUT
+ ┃ ┃ ┗ 📝 - newpollution.ejs -> didn't like the form, need to add error divs, and add the user
+ ┃ ┣ 📝 - login.ejs -> 🆗 
+ ┃ ┣ 📝 - signup.ejs -> 🆗
+ ┃ ┗ 📝 - whereareyou.ejs -> make appear pollution near you 
+ ┃ 
+ ┗ 🔚 
+
+lemme show you some images:
+<img src="READMEimg/56.png" alt="Almots finished app screenshot 1" height="300" />
+<img src="READMEimg/57.png" alt="Almots finished app screenshot 2" height="300" />
+<img src="READMEimg/58.png" alt="Almots finished app screenshot 3" height="300" />
+<img src="READMEimg/59.png" alt="Almots finished app screenshot 4" height="300" />  
+<img src="READMEimg/60.png" alt="Almots finished app screenshot 5" height="300" />  
+
+
+I
+⌛ *Hours Spent:*  20h (more or less)
+
+
+***TOTAL HOURS:*** 72h
 ---
 
 ## Side Notes

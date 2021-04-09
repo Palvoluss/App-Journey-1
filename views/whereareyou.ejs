@@ -1,0 +1,39 @@
+<html lang="en">
+
+ 	<%- include('./partials/head.ejs') %>
+
+ <body>
+
+ 	<%- include('./partials/nav.ejs') %>
+
+
+ 	<div class="pollution content">
+ 		<div class="geolocalize">
+ 			<a class="geolocalizeSpan" > <h6>🗺️</h6> - Geolocalize Yourself</a>
+ 		</div>
+
+ </body>
+
+ <script type="text/javascript"> 
+	const nearYou = document.querySelector('.geolocalize')
+
+	nearYou.addEventListener('click', async function (e) {
+	  const userGeo = async () => {
+	    const pos = await new Promise((resolve, reject) => {
+	      navigator.geolocation.getCurrentPosition(resolve, reject)
+	    })
+	    return `/pollution/near?lng=${pos.coords.longitude}&lat=${pos.coords.latitude}`
+	  }
+
+	  const endpoint = await userGeo()
+	  await fetch(endpoint, { method: 'GET' })
+	    .then(response => response.json())
+	    .then(location.assign(endpoint))
+	    .catch(err => console.log(err))
+	})
+
+ </script>
+
+ 	<%- include('./partials/footer.ejs') %> 
+
+ </html>

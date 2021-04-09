@@ -3,16 +3,20 @@ const router = express.Router()
 
 const pollutionController = require('../controllers/pollutionControllers')
 const upload = require('../utilis/multerConfig')
-const authFunction = require('../utilis/checkAuth')
 
 // Pollution list by GET
-router.get('/', authFunction.checkToken, pollutionController.pollution_list)
+router.get('/', pollutionController.pollution_list)
+
+router.get('/where', pollutionController.pollution_where)
+
+// Pollution list near geolocation by GET
+router.get('/near', pollutionController.pollution_list_near)
 
 // Pollution Upload by GET
 router.get('/upload', pollutionController.pollution_upload_get)
 
 // Pollution Upload by POST
-router.post('/upload', authFunction.checkToken, upload.single('photoInput'), pollutionController.pollution_upload_post)
+router.post('/upload', upload.single('photoInput'), pollutionController.pollution_upload_post)
 
 // update Pollution
 router.put('/update/:id', pollutionController.pollution_update)

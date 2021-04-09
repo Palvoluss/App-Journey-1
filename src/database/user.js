@@ -1,4 +1,6 @@
 import mongoose from 'mongoose'
+const { isEmail } = require('validator')
+const bcrypt = require('bcrypt')
 
 const UserSchema = new mongoose.Schema(
   {
@@ -15,7 +17,7 @@ const UserSchema = new mongoose.Schema(
       lowercase: true,
       unique: true,
       required: [true, "can't be blank"],
-      match: [/\S+@\S+\.\S+/, 'is invalid'],
+      validate: [isEmail, 'Please enter a valid email'],
       index: true
     },
     bio: {
@@ -29,20 +31,34 @@ const UserSchema = new mongoose.Schema(
     }
   },
   {
-    timestamps: true,
-    toObject: function (doc, ret, options) {
-      delete ret.password
-    }
+    timestamps: true
+    // toObject: function (doc, ret, options) {
+    //   delete ret.password
+    // }
   })
 
+// Virtuals
+
+UserSchema.pre('save', async function (next) {
+  const salt = await bcrypt.genSalt()
+  this.password = await bcrypt.hash(this.password, salt)
+  next()
+})
+
+
+UserSchema.statics.login = async function(email, password) {
+  const user = await this.findOne({ email })
+  if (user) {
+    const auth = await bcrypt.compare(password, user.password)
+    if (auth) {
+      return user
+    }
+    throw Error('incorrect password')
+  }
+  throw Error('incorrect email')
+}
+
 module.exports = mongoose.model('User', UserSchema)
-
-
-
-
-
-
-
 
 // import uniqueValidator from 'mongoose-unique-validator'
 // userSchema.plugin(uniqueValidator, { message: 'is already taken' })

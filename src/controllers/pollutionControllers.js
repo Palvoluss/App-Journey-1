@@ -23,17 +23,17 @@ const pollution_upload_post = (req, res) => {
     _id: new mongoose.Types.ObjectId(),
     pollution_type: req.body.pollution_type,
     description: req.body.description,
-    loc: req.body.loc,
+    geometry: { coordinates: req.body.loc.split(',').map(Number) },
     photo: req.file.path
   })
 
   newPollution.save()
-  	.then((result) => {
-  		res.redirect('/pollution')
-  	})
-  	.catch((err) => {
-  		console.log(err)
-  	})
+    .then((result) => {
+      res.redirect('/pollution')
+    })
+    .catch((err) => {
+      console.log(err)
+    })
 }
 
 // Pollution Specific
@@ -42,7 +42,7 @@ const pollution_specific = (req, res) => {
 
   Pollution.findById(id)
     .then(result => {
-      res.render('specificpollution', { pollution: result, title: result.loc })
+      res.render('specificpollution', { pollution: result, title: result.geometry.coordinates })
     })
     .catch((err) => {
       console.log(err)
@@ -78,8 +78,29 @@ const pollution_update = (req, res) => {
       console.log(err)
     })
 }
+
+const pollution_list_near = (req, res, next) => {
+  Pollution.aggregate().near({
+    near: { type: 'point', coordinates: [parseFloat(req.query.lng), parseFloat(req.query.lat)] },
+    maxDistance: 200000, // in 10k meters
+    spherical: true,
+    distanceField: 'dist.calculated'
+  }).then(function (pollution) {
+    console.log(pollution)
+    res.send(pollution)
+  }).then((pollution) => {
+    res.render('pollution', { title: 'Pollution List Near you', pollutions: pollution })
+  })
+}
+
+const pollution_where = (req, res) => {
+  res.render('whereareyou', { title: 'Geolocalize yourself' })
+}
+
 module.exports = {
   pollution_list,
+  pollution_where,
+  pollution_list_near,
   pollution_upload_get,
   pollution_upload_post,
   pollution_specific,

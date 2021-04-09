@@ -1,51 +1,60 @@
 <html lang="en">
+
 <%- include('./partials/head.ejs') %>
 
 <body>
     <%- include('./partials/nav.ejs') %>
-    <form action="/signup">
-        <h2>Sign up</h2>
+
+    <form class="login content" action="/user/singup">
+        <label for="username">Username</label>
+        <input type="text" name="username" />
+        <div class="username error"></div>
         <label for="email">Email</label>
-        <input type="text" name="email" required />
+        <input type="text" name="email" />
         <div class="email error"></div>
         <label for="password">Password</label>
-        <input type="password" name="password" required />
+        <input type="password" name="password" />
         <div class="password error"></div>
         <button>Sign up</button>
     </form>
 </body>
+
 <%- include('./partials/footer.ejs') %>
+
 <script>
-  const form = document.querySelector('form');
-  const emailError = document.querySelector('.email.error');
-  const passwordError = document.querySelector('.password.error');
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    // reset errors
-    emailError.textContent = '';
-    passwordError.textContent = '';
-    // get values
-    const email = form.email.value;
-    const password = form.password.value;
-    try {
-      const res = await fetch('/signup', { 
-        method: 'POST', 
-        body: JSON.stringify({ email, password }),
-        headers: {'Content-Type': 'application/json'}
-      });
-      const data = await res.json();
-      console.log(data);
-      if (data.errors) {
-        emailError.textContent = data.errors.email;
-        passwordError.textContent = data.errors.password;
-      }
-      if (data.user) {
-        location.assign('/');
-      }
+const form = document.querySelector('form')
+const usernameError = document.querySelector('.username.error')
+const emailError = document.querySelector('.email.error')
+const passwordError = document.querySelector('.password.error')
+form.addEventListener('submit', async (e) => {
+  e.preventDefault()
+  // reset errors
+  usernameError.textContent = ''
+  emailError.textContent = ''
+  passwordError.textContent = ''
+  // get values
+  const email = form.email.value
+  const password = form.password.value
+  const username = form.username.value
+  try {
+    const res = await fetch('/user/singup', {
+      method: 'POST',
+      body: JSON.stringify({ email, password, username }),
+      headers: { 'Content-Type': 'application/json' }
+    })
+    const data = await res.json()
+    console.log(data)
+    if (data.errors) {
+      usernameError.textContent = data.errors.username
+      emailError.textContent = data.errors.email
+      passwordError.textContent = data.errors.password
     }
-    catch (err) {
-      console.log(err);
+    if (data.user) {
+      location.assign('/')
     }
-  });
+  } catch (err) {
+    console.log(err)
+  }
+})
 </script>
 </html>
