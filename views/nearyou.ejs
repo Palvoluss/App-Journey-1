@@ -8,16 +8,17 @@
 
 
  	<div class="pollution content">
- 		<div class="addPost">
- 			<a class="addPostSpan" href="/pollution/upload"> <h6>💀</h6> - Add Pollution</a>
- 		</div>
+ 		<span class="youLoc">
+ 			<h6>🧭 </h6> Your position - lng:<%= query.lng %>, lat:<%= query.lat %>
+ 		</span>
 
  		<% if (pollutions.length > 0) { %>
  			<% pollutions.forEach(pollution => { %>
  				<a class="pollutionPost" href="/pollution/<%= pollution._id %>">
 		 			<h3> <%= pollution.pollution_type %></h3>
 		 			<p> <%= pollution.description %></p>
-		 			<img src= "<%= pollution.photo %>" width="200px" >
+		 			<img src= "../<%= pollution.photo %>" width="200px" >
+		 			<p> <%= pollution.dist.calculated.toFixed(2) %> Meter</p>
 		 		</a>
 	 			<% }) %>
  		<% } else { %>

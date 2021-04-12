@@ -5,7 +5,7 @@
   <%- include("./partials/nav.ejs") %>
 
   <div class="addPost">
-    <a class="addPostSpan" href="">
+    <a class="addPostSpan" data-doc="<%= pollution._id %>">
         <h6>🧹</h6> - Clean Pollution
     </a>
     <a class="delete" data-doc="<%= pollution._id %>">
@@ -33,11 +33,22 @@
 const trashcan = document.querySelector('a.delete')
 trashcan.addEventListener('click', (e) => {
   const endpoint = `/pollution/delete/${trashcan.dataset.doc}`
-  fetch(endpoint, { method: 'DELETE'})
+  fetch(endpoint, { method: 'DELETE' })
     .then(response => response.json())
     .then(data => window.location.href = data.redirect)
     .catch(err => console.log(err))
 })
+
+const scopa = document.querySelector('a.addPostSpan')
+scopa.addEventListener('click', (e) => {
+  const endpoint = `/pollution/update/${scopa.dataset.doc}`
+  fetch(endpoint, { method: 'PUT' })
+    .then(response => response.json())
+    .then(data => window.location.href = `/pollution/${scopa.dataset.doc}`)
+    .catch(err => console.log(err))
+})
+
+
 </script>
 </body>
 </html>

@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const userControllers = require('../controllers/userControllers')
+const jwtUtilis = require('../utilis/jwtUtilis')
 
 router.get('/singup', userControllers.singup_get)
 
@@ -13,7 +14,7 @@ router.get('/login', userControllers.login_get)
 
 router.post('/login', userControllers.login_post)
 
-router.delete('/:userId', userControllers.delete_user)
+router.delete('/:userId', jwtUtilis.requireAuth, userControllers.delete_user)
 
 module.exports = router
 

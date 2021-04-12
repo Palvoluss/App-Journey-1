@@ -527,8 +527,14 @@ hr {
     border-bottom: none;
  }
 
+.youLoc {
+  display: flex;
+  justify-content: center;
+}
 
-
+.youLoc h6 {
+  margin: 3px 10px 0 0;
+}
 
 
  </style>

@@ -65,12 +65,8 @@ const pollution_delete = (req, res) => {
 // Pollution Update
 const pollution_update = (req, res) => {
   const id = req.params.id
-  const updateInfo = { status: 'cleaned the area, GG!' }
 
-  Pollution.findOneAndUpdate(
-    id,
-    updateInfo,
-    { new: true })
+  Pollution.findOneAndUpdate({ _id: id }, { $set: { status: 'cleaned the area, GG!' } }, { new: true })
     .then(result => {
       res.json({ result })
     })
@@ -85,11 +81,8 @@ const pollution_list_near = (req, res, next) => {
     maxDistance: 200000, // in 10k meters
     spherical: true,
     distanceField: 'dist.calculated'
-  }).then(function (pollution) {
-    console.log(pollution)
-    res.send(pollution)
   }).then((pollution) => {
-    res.render('pollution', { title: 'Pollution List Near you', pollutions: pollution })
+    res.render('nearyou', { query: req.query, title: 'Pollution List Near you', pollutions: pollution })
   })
 }
 
