@@ -1,447 +1,449 @@
-<style>
-	
-	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+<style>@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
- a {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 20px;
-  line-height: 150%;
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-    "Helvetica Neue", sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  text-decoration: underline;
-  padding:3px;
+a {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    line-height: 150%;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+        "Helvetica Neue", sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    text-decoration: underline;
+    padding: 3px;
 }
 
-a:link{
+a:link {
     color: rgba(0, 0, 0, 0.6);
 }
 
-a:visited{
+a:visited {
     color: rgba(0, 0, 0, 0.6);
 }
 
-a:hover{
+a:hover {
     background: linear-gradient(#eee, #eee);
     background-size: auto 4em;
     background-repeat: no-repeat;
-    background-position: 0% 15px; 
+    background-position: 0% 15px;
 }
 
 body {
-  font-family: inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 500;
+    font-family: inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+        "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 500;
 }
 
 .subtitle {
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
 }
 
 
 h2 {
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 30px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 700;
-  line-height: 1.1;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+        "Helvetica Neue", Arial, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 1.1;
 }
 
 h3 {
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 25px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 700;
-  line-height: 1.1;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+        "Helvetica Neue", Arial, sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 1.1;
 }
 
 h4 {
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 700;
-  line-height: 1.1;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+        "Helvetica Neue", Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 1.1;
 }
 
 h5 {
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 700;
-  line-height: 1.1;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+        "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 1.1;
 }
 
 h6 {
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 700;
-  line-height: 1;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+        "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 1;
 }
 
 p {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 20px;
-  line-height: 150%;
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-    "Helvetica Neue", Arial, sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    line-height: 150%;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+        "Helvetica Neue", Arial, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
 }
 
 button {
-  background-color: #f0f2f4;
-  color: #404b59;
-  border: 1px solid #f0f2f4;
-  box-shadow: rgba(15, 15, 15, 0.1) 0px 1px 2px;
-  border-radius: 6px;
-  align-items: center;
-  height: fit-content;
-  min-width: 180px;
-  font-size: large;
-  font-weight: 500;
-  padding: 12px;
+    background-color: #f0f2f4;
+    color: #404b59;
+    border: 1px solid #f0f2f4;
+    box-shadow: rgba(15, 15, 15, 0.1) 0px 1px 2px;
+    border-radius: 6px;
+    align-items: center;
+    height: fit-content;
+    min-width: 180px;
+    font-size: large;
+    font-weight: 500;
+    padding: 12px;
 }
 
 
 button:hover {
-  background-color: #66778c;
-  color: #fff;
+    background-color: #66778c;
+    color: #fff;
 }
 
 button.primary {
-  background-color: #e16259;
-  color: #fff;
-  border: 1px solid rgb(190, 86, 67);
-  border-radius: 3px;
-  align-items: center;
-  height: fit-content;
-  min-width: 180px;
-  font-size: large;
-  font-weight: 500;
-  padding: 12px;
+    background-color: #e16259;
+    color: #fff;
+    border: 1px solid rgb(190, 86, 67);
+    border-radius: 3px;
+    align-items: center;
+    height: fit-content;
+    min-width: 180px;
+    font-size: large;
+    font-weight: 500;
+    padding: 12px;
 }
 
 button.primary:hover {
-  background-color: #cf534a;
-  color: #fff;
+    background-color: #cf534a;
+    color: #fff;
 }
 
 form {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 input,
 textarea {
-  font-size: 18px;
-  padding: 8px;
-  margin: 10px auto;
+    font-size: 18px;
+    padding: 8px;
+    margin: 10px auto;
 }
 
 input[type="checkbox"] {
-  width: 15px;
-  height: 15px;
-  margin: 10px;
+    width: 15px;
+    height: 15px;
+    margin: 10px;
 }
 
 input[type="radio"] {
-  width: 15px;
-  height: 15px;
-  margin: 10px;
+    width: 15px;
+    height: 15px;
+    margin: 10px;
 }
 
 .code {
-  background-color: #f1f1f1;
-  padding: 15px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: 17px;
-  font-family: monospace;
-  border-radius: 3px;
-  line-height: 1.25;
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 17px;
+    font-family: monospace;
+    border-radius: 3px;
+    line-height: 1.25;
 }
 
 pre {
-  padding: 0px;
+    padding: 0px;
 }
 
 blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 40px 20px;
-  quotes: "\201C""\201D""\2018""\2019";
-  font-size: 20px;
-  line-height: 150%;
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-    "Helvetica Neue", Arial, sans-serif;
-  font-style: italic;
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 40px 20px;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-size: 20px;
+    line-height: 150%;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+        "Helvetica Neue", Arial, sans-serif;
+    font-style: italic;
 }
+
 blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
 }
+
 blockquote p {
-  display: inline;
+    display: inline;
 }
 
 .nav {
-  background-color: #fff;
-  overflow: hidden;
+    background-color: #fff;
+    overflow: hidden;
 }
 
 
 /* Style the links inside the navigation bar */
 .nav a {
-  color: #37352f;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 550;
+    color: #37352f;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 550;
 }
 
 
 /* Add a color to the active/current link */
 .nav a.active {
-  background-color: #fff;
-  color: #37352f;
+    background-color: #fff;
+    color: #37352f;
 }
 
 /* Change the color of links on hover */
 .nav a:hover {
-  background-size: 1px;
-  background-color: rgba(55, 53, 47, 0.08);
-  color: #37352f;
+    background-size: 1px;
+    background-color: rgba(55, 53, 47, 0.08);
+    color: #37352f;
 }
 
 ul {
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-    "Helvetica Neue", Arial, sans-serif;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+        "Helvetica Neue", Arial, sans-serif;
 }
 
 li {
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 20px;
-  line-height: 1.5;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+        "Helvetica Neue", Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
 }
 
 table {
-  border: 1px solid #333;
-  border-collapse: collapse;
-  padding: 20px;
+    border: 1px solid #333;
+    border-collapse: collapse;
+    padding: 20px;
 }
 
 tr {
-  border: 1px solid #333;
-  padding: 10px;
+    border: 1px solid #333;
+    padding: 10px;
 }
+
 tr:nth-child(even) {
-  background-color: #f1f1f1;
+    background-color: #f1f1f1;
 }
 
 td {
-  border: 1px solid #333;
-  padding: 10px;
+    border: 1px solid #333;
+    padding: 10px;
 }
 
 th {
-  border: 1px solid #333;
-  text-align: left;
-  padding: 20px;
+    border: 1px solid #333;
+    text-align: left;
+    padding: 20px;
 }
 
 /*Edited Styles*/
 
 body {
-  margin: 0;
+    margin: 0;
 }
 
 h1 {
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 1.1;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+        "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1.1;
 }
+
 h2 {
-  font-size: 42px;
-  margin-top: 0;
-  color: #333333;
+    font-size: 42px;
+    margin-top: 0;
+    color: #333333;
 }
 
 .title {
-  width: 100%;
-  border-bottom: 1px solid #37352f;
+    width: 100%;
+    border-bottom: 1px solid #37352f;
 }
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0px 20px 0px 20px;
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 20px 0px 20px;
+    text-align: center;
 }
 
 /*Added Styles*/
 
-/* Hide scrollbar for Chrome, Safari and Opera *//* Hide scrollbar for Chrome, Safari and Opera */
+/* Hide scrollbar for Chrome, Safari and Opera */
+/* Hide scrollbar for Chrome, Safari and Opera */
 
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .example {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 /*Withe head bar with title and login*/
 .head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 32px;
-  margin: 0;
-  padding: 0px 30px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    margin: 0;
+    padding: 0px 30px 0px 20px;
 }
 
 .left {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .cover {
-  height: 30%;
-  background-image: url(provacover.jpg);
-  background-size: cover;
-  margin: 0;
-  padding: 0px;
+    height: 30%;
+    background-image: url(provacover.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 0px;
 }
 
 .button {
-  background-color: #f0f2f4;
-  color: #404b59;
-  border: 1px solid #f0f2f4;
-  box-shadow: rgba(15, 15, 15, 0.1) 0px 1px 2px;
-  border-radius: 6px;
-  align-items: center;
-  height: fit-content;
-  min-width: 180px;
-  font-size: large;
-  font-weight: 500;
-  padding: 2px 15px;
+    background-color: #f0f2f4;
+    color: #404b59;
+    border: 1px solid #f0f2f4;
+    box-shadow: rgba(15, 15, 15, 0.1) 0px 1px 2px;
+    border-radius: 6px;
+    align-items: center;
+    height: fit-content;
+    min-width: 180px;
+    font-size: large;
+    font-weight: 500;
+    padding: 2px 15px;
 }
 
 .button:hover {
-  background-color: #ffe268;
-  color: #66778c;
-  background: linear-gradient(#ffe268, #eee);
-  background-size: auto;
-  background-repeat: auto;
-  background-position: auto;
+    background-color: #ffe268;
+    color: #66778c;
+    background: linear-gradient(#ffe268, #eee);
+    background-size: auto;
+    background-repeat: auto;
+    background-position: auto;
 }
 
 .navigator {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  width: 50%;
-  transform: translateY(-50px);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    transform: translateY(-50px);
 }
 
 .icon {
-  font-size: 80px;
+    font-size: 80px;
 }
 
 .links {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .content {
-  padding: 0px 10%;
-} 
+    padding: 0px 10%;
+}
 
 hr {
-  margin-top: 100px;
+    margin-top: 100px;
 }
 
 .not-found h2 {
-  text-align: center;
+    text-align: center;
 
 }
 
 /*Blog Page*/
 
 .single {
-  position: relative;
-  background-image: none;
-  z-index: 1;
-  transition: 0.5s
+    position: relative;
+    background-image: none;
+    z-index: 1;
+    transition: 0.5s
 }
 
 .single::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: linear-gradient(
-    to right, rgb(255 0 0 / 62%) 20%, #fff, #fff , #fff 100%
-  );
-  z-index: -1;
-  transition: opacity 0.5s linear;
-  opacity: 0;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgb(255 0 0 / 62%) 20%, #fff, #fff, #fff 100%);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
 }
 
 .single:hover::before {
-  opacity: 0.5
-
+    opacity: 0.5
 }
 
 .single:hover {
-  transform: translateX(20px);
+    transform: translateX(20px);
 }
 
 .addPost {
-  direction: rtl;
-  display: flex;
-  align-items: center;
-  width: 90%;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    width: 90%;
 }
 
 .addPostSpan {
-      display: flex;
+    display: flex;
     align-items: center;
     border: #333333 solid 3px;
     padding: 2px 8px;
@@ -449,17 +451,17 @@ hr {
 }
 
 .addPostSpan h6 {
-  font-size: 30px;
-  margin: 0;
- }
+    font-size: 30px;
+    margin: 0;
+}
 
 .addPostSpan:active {
     border: gray solid 1px;
     border-bottom: none;
- }
+}
 
- .delete {
-      display: flex;
+.delete {
+    display: flex;
     align-items: center;
     border: #333333 solid 3px;
     padding: 2px 8px;
@@ -467,50 +469,50 @@ hr {
 }
 
 .delete h6 {
-  font-size: 30px;
-  margin: 0;
- }
+    font-size: 30px;
+    margin: 0;
+}
 
 .delete:active {
     border: gray solid 1px;
     border-bottom: none;
- }
+}
 
 .login {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .login :nth-child(n) {
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
 .addPoll {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .addPoll :nth-child(n) {
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
 .error {
-  color: red;
+    color: red;
 }
 
 .geolocalize {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  width: 90%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 90%;
 }
 
 .geolocalizeSpan {
-      display: flex;
+    display: flex;
     align-items: center;
     border: #333333 solid 3px;
     padding: 2px 8px;
@@ -518,23 +520,33 @@ hr {
 }
 
 .geolocalizeSpan h6 {
-  font-size: 30px;
-  margin: 0;
- }
+    font-size: 30px;
+    margin: 0;
+}
 
 .geolocalizeSpan:active {
     border: gray solid 1px;
     border-bottom: none;
- }
+}
 
 .youLoc {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .youLoc h6 {
-  margin: 3px 10px 0 0;
+    margin: 3px 10px 0 0;
 }
 
+.create-blog {
+    margin: auto 10%;
+}
 
- </style>
+.newblog {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+</style>

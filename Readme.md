@@ -9,6 +9,7 @@ I'm Pablo, in this repository i'm going to record my entire process of creating 
 - [Rules](#rules)
 - [The Project](#the-project)
 - [Day Zero](#day-0)
+- [What's next?](#whats-next?)
 - [Side Notes](#side-notes)
 - [About Me](#about-me)
 
@@ -369,6 +370,7 @@ Sooo lot of updates, so take a sit and follow me:
 I've finally make work all the authentication, now you can *Sign Up* and *Login* with your email and a username. It works well and I was able to make a conditional statement with jwt cookie to show the _login_ / _sing up_ button or *Welcome, Username*/ _log out_ and to authenticate routes so now only logged in user can post a blog or upload a pollution, I've also added a PUT API for pollution, to update the status from *Need cleaning!!* to *'cleaned the area, GG!* and it works pretty well but I need to implement the fetch on the button. 
 I also took a lot of work to make a nicer css, I'm started from [Notion.css](https://fillerink.github.io/notion.css/) by [Sreeram](https://sreeram.codes/) and I've edited what I didn't like and added some classes to make the template I wanted, in the style.css is everything divided so you can look what I've done. I'm almost done, because, at least some litte things that aren't my priority everything works and the last two things I need to do is to get a correct visualization of the pollution/near GET request, and the deploy of the app. Everything I'm not happy with I'll write down below to make a TODO list for the future or for everyone who want to continue this app!
 
+```
 📂  - Notes on todo correction 
  ┣ 📂 - Views 
  ┃ ┣ 📂 - Partials -> 🆗
@@ -385,6 +387,7 @@ I also took a lot of work to make a nicer css, I'm started from [Notion.css](htt
  ┃ ┗ 📝 - whereareyou.ejs -> make appear pollution near you 
  ┃ 
  ┗ 🔚 
+``
 
 lemme show you some images:
 <img src="READMEimg/56.png" alt="Almots finished app screenshot 1" height="300" />
@@ -394,11 +397,33 @@ lemme show you some images:
 <img src="READMEimg/60.png" alt="Almots finished app screenshot 5" height="300" />  
 
 
-I
 ⌛ *Hours Spent:*  20h (more or less)
 
 
-***TOTAL HOURS:*** 72h
+### The last 2 days
+
+📅 **Date:** 12-13 April  
+
+No joke. It's finished. 
+
+The last step was to deploy the app on my [Digital Ocean](https://m.do.co/c/069a6108b50b) server, with Nginx, Pm2 e Let's Encrypt.
+
+Here's the link ➡️ [www.recodin.it](www.recodin.it)
+
+Hope you'll like the 1.00 version of my fist RESTfull App, it's not perfer but it works and for me it's enough to be happy. Hope someone will find this repo usefull and interesting. 
+
+
+⌛ *Hours Spent:*  5h
+
+
+***TOTAL HOURS:*** 77h
+
+## What's next?
+
+This is the first release of the app, is the MVP (Minimum Viable Product) and 'cause of that isn't finished. I've added a lot of things for the frist time, so probably there are some bug i didn't notice yet due to my inexperience. I would like to complete this app with all the features i've projected but it will not be my main goal in the next months, but who knows. Btw if anyone would like to fork this project and continue it, I'll be very glad of that! 
+
+Hope to upload as soon as possible a Youtube video on my channel about this experience! See you there or on another project! 
+
 ---
 
 ## Side Notes
