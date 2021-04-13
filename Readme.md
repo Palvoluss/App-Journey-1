@@ -387,9 +387,9 @@ I also took a lot of work to make a nicer css, I'm started from [Notion.css](htt
  ┃ ┗ 📝 - whereareyou.ejs -> make appear pollution near you 
  ┃ 
  ┗ 🔚 
-``
+```
 
-lemme show you some images:
+lemme show you some images:  
 <img src="READMEimg/56.png" alt="Almots finished app screenshot 1" height="300" />
 <img src="READMEimg/57.png" alt="Almots finished app screenshot 2" height="300" />
 <img src="READMEimg/58.png" alt="Almots finished app screenshot 3" height="300" />
